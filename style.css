@@ -22,6 +22,7 @@ body{
 .calculadora{
    display: flex;
     flex-direction: column;
+    height: 200px;
     width: 320px;
     padding: 20px;
     background: #cfcfcf;
@@ -33,7 +34,7 @@ body{
 .operadores1{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
@@ -42,6 +43,6 @@ body{
 .operadores2{
 display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: 6px;
 }
 
