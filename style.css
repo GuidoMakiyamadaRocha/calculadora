@@ -18,7 +18,7 @@ body{
    background: #dcdcdc;
 
 }
-/* defini o tamanho da área da minha calculadora( mais especificamente a largura dela**/
+/* defini o tamanho da área da minha calculadora**/
 .calculadora{
    display: flex;
     flex-direction: column;
@@ -28,26 +28,14 @@ body{
     gap: 15px;
 }
 
-.displays{
-   display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/*mudei a fonte**/
-.info{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-   font-family: sans-serif;
-}
-
-
 /* Aqui eu dividi os operadores em 1 e 2. Os operadores 1 são os display onde vai entrar o número que for escolhido,
  aqui mexi no posicionamento e coloquei os displays em colunas usando o display:grid.**/
 .operadores1{
-     display: grid;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
