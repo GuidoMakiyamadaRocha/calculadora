@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <!-- Criei esse conteiner para definir uma área total da minha calculadora, assim me permitindo trabalhar de forma mais organizada -->
+ <div class="calculadora">
+    
+ <!--Aqui temos a estrutura APARENTE da nossa calculadora. E criei essa div para poder organizar e estiliza-la.-->
+    <div class="operadores1">
+
+        <!--usamos o atributo input para criar um display ativo, assim me permitindo escolher o display que iremos digitar os numeros que queremos realizar o calculo.-->
+        <div class="displays">
+          <input type="text" id="display1" readonly onclick="selecionardisplay(1)"> 
+       <input type="text" id="display2" readonly onclick="selecionardisplay(2)"> 
+      </div>
+
+ <!-- Aqui eu criei um conteiner para separar somente os textos que ficaram visíveis na minha calculadora-->
+       <div class="info">
+    <p class="n1">número 1:</p>
+    <p class="n2">número 2:</p>  
+  </div>
+
+    </div>
+
+    <div class="operadores2">
+         <!--Aqui temos os nossos botões que vão ser aparentes para o usuário.-->
+        <button class="clear" onclick="ClearDisplay()">C</button>
+         <button class="soma" onclick="SetOperator('+')">+</button>
+          <button class="subtrair" onclick="SetOperator('-')">-</button>
+           <button class="multiplicar" onclick="SetOperator('*')">x</button>
+            <button class="dividir" onclick="SetOperator('/')">/</button>
+    </div>
+
+
+ </div>
+
+ <!--Aqui criei um conteiner separado para poder trabalhar com o display dos numeros que vamos ter na calculadora, o layout dos numeros de 0 a 9. 
+    Criei essa div "numeros" para poder estilizar e organizar os numeros atravéz do css, usando o atributo class. 
+     Pois, quando colocamos algo dentro de uma div, ela vai servir como conteiner(e se tiver o "class" vamos poder manipular esses elementos no css)
+   e assim, tudo o que estiver dentro dela vai ser "filhos" da div(numeros) que é o "pai" dos "number".
+    <div class="numeros">
+        <button class="number" onclick="NumberDisplay('0')">0</button>
+         <button class="number" onclick="NumberDisplay('1')">1</button>
+          <button class="number" onclick="NumberDisplay('2')">2</button>
+           <button class="number" onclick="NumberDisplay('3')">3</button>
+            <button class="number" onclick="NumberDisplay('4')">4</button>
+             <button class="number" onclick="NumberDisplay('5')">5</button>
+              <button class="number" onclick="NumberDisplay('6')">6</button>
+               <button class="number" onclick="NumberDisplay('7')">7</button>
+                <button class="number" onclick="NumberDisplay('8')">8</button>
+                 <button class="number" onclick="NumberDisplay('9')">9</button>
+    </div>-->
+
+    <script src="calculadora.js"></script>
+</body>
+</html>

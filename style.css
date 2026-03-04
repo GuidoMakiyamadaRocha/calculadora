@@ -1,0 +1,59 @@
+/* Este aqui não funcinou, pois eu transformei cada numero em um conteiner que deveria ser um layout,
+assim, fazendo eles ficarem um abaixo do outro. Algo que não é a proposta. 
+
+.number{
+   display: grid;
+   grid-template-columns: auto;
+   padding: 10px;
+   text-align: center;
+   font-size: 30px;
+}
+
+**/
+body{
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   background: #dcdcdc;
+
+}
+/* defini o tamanho da área da minha calculadora( mais especificamente a largura dela**/
+.calculadora{
+   display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 20px;
+    background: #cfcfcf;
+    gap: 15px;
+}
+
+.displays{
+   display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*mudei a fonte**/
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   font-family: sans-serif;
+}
+
+
+/* Aqui eu dividi os operadores em 1 e 2. Os operadores 1 são os display onde vai entrar o número que for escolhido,
+ aqui mexi no posicionamento e coloquei os displays em colunas usando o display:grid.**/
+.operadores1{
+     display: grid;
+    gap: 10px;
+    
+}
+
+.operadores2{
+display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
