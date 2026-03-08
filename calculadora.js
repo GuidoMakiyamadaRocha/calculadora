@@ -41,21 +41,25 @@ document.addEventListener('keydown', function(event) {
 
     // isso faz com que o navegador não permita a entrada de letras na nossa calculadora, utilizando o !isNaN(verifica se não é um numero)
     if (!isNaN(tecla)) {
+         event.preventDefault();
         displayAtivo.value += tecla;
     }
 
     // aqui é a entrada dos nosso operadores. 
     if (tecla === '+' || tecla === '-' || tecla === '*' || tecla === '/') {
+         event.preventDefault();
         displayAtivo.value += tecla;
     }
 
     // Utilização de virgula e ponto para números decimais.
     if (tecla === ',' || tecla === '.') {
+         event.preventDefault();
         displayAtivo.value += ',';
     }
 
     // backspace
     if (tecla === 'Backspace') {
+         event.preventDefault();
         displayAtivo.value = displayAtivo.value.slice(0, -1);
     }
 
@@ -96,3 +100,11 @@ function SetOperator(operador) {
     //  pois depois de efetuar a primeira conta, ela já vai deixar selecionado o display 1, permitindo que eu efetue calculos em sequencia com o resultado que nos foi dado.
     displayAtivo = display1;
 }
+
+display1.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9,]/g, "");
+});
+
+display2.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9,]/g, "");
+});
